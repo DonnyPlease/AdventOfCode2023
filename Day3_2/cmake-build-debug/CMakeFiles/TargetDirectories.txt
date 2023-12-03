@@ -1,0 +1,3 @@
+C:/Users/samue/CLionProjects/Advent/Day3_2/cmake-build-debug/CMakeFiles/Day3_2.dir
+C:/Users/samue/CLionProjects/Advent/Day3_2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/samue/CLionProjects/Advent/Day3_2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
