@@ -15,7 +15,7 @@ def get_points(numbers):
     return count
 
 if __name__ == "__main__":
-    cards = defaultdict(int)
+    cards = defaultdict(int) # This was added later, after the first successful submission
     line = input()
     i = 1
     while (line != ''):
