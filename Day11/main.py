@@ -2,17 +2,11 @@ def read_input():
     lines = []
     with open("Day11/input.txt", "r") as f:
         lines = f.readlines()
-
-    # Remove trailing newline
     lines = [line.strip() for line in lines]
     return lines
 
 def get_empty_rows(lines):
-    empty = []
-    for i, line in enumerate(lines):
-        if line == '.'*len(line):
-            empty.append(i)
-    return empty
+    return [i for i, line in enumerate(lines) if line == '.'*len(line)]
 
 def get_empty_cols(lines):
     empty = []
@@ -25,15 +19,9 @@ def get_empty_cols(lines):
         if em:
             empty.append(i)
     return empty
-
     
 def get_galaxies(lines):
-    galaxies = []
-    for i in range(len(lines)):
-        for j in range(len(lines[0])):
-            if lines[i][j] == '#':
-                galaxies.append((i,j))
-    return galaxies
+    return [(i,j) for i in range(len(lines)) for j in range(len(lines[0])) if lines[i][j] == '#']
 
 def find_distances(lines, expansion):
     galaxies = get_galaxies(lines)
@@ -57,5 +45,5 @@ if __name__ == "__main__":
     lines = read_input()
     d1 = find_distances(lines, 2)
     d2 = find_distances(lines, 1000000)
-    print("Part one result:  ",sum(d1))
-    print("Part two result:  ",sum(d2))
+    print("Part one result:  ", sum(d1))
+    print("Part two result:  ", sum(d2))
